@@ -51,11 +51,34 @@
 
     ];
 
-    foreach($hotels as $keys => $hotel){
-        var_dump($hotel);
-    }
+
 
 ?>
+
+
+<table class="table">
+    <thead>
+        <tr class="table-dark">
+            <th scope="col">Nome</th>
+            <th scope="col">Descrizione</th>
+            <th scope="col">Parking</th>
+            <th scope="col">Vote</th>
+            <th scope="col">Distance to centre</th>
+        </tr>
+    </thead>
+    <?php foreach($hotels as $keys => $hotel){ ?>
+        <tbody>
+            <tr>
+                <td scope="row" class="table-primary"> <?php echo $hotel['name'] ?></td>
+                <td scope="row" class="table-danger"> <?php echo $hotel['description'] ?></td>
+                <td scope="row" class="table-success"> <?php echo $hotel['parking'] ?></td>
+                <td scope="row" class="table-warning"> <?php echo $hotel['vote'] ?></td>
+                <td scope="row" class="table-info"> <?php echo $hotel['distance_to_center'] ?></td>
+            </tr>
+        </tbody>
+    <?php } ?>
+</table>
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
